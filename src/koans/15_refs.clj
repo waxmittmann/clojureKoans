@@ -43,9 +43,8 @@
           (ref-set the-world {})
           (alter the-world assoc :jerry "Real Jerry")
           (alter bizarro-world assoc :jerry "Bizarro Jerry")
+          [(:jerry (deref the-world)) (:jerry (deref bizarro-world))]
         )
-        [(deref the-world) (deref the-world)]
        )
     )
-  )
 )
